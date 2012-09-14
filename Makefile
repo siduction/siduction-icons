@@ -14,27 +14,30 @@ all:
 	    false ; \
 	fi
 
-#	for i in ${SIZE}; do \
-#	    mkdir -p "hicolor/$${i}x$${i}/apps" ; \
-#	    for k in $$(ls *svg); do \
-#	        kstrip=$$(echo $${k} | awk -F . {'print $$1'}) ; \
-#	        inkscape --export-width=$${i} \
-#	            --export-height=$${i} \
-#	            --export-png="$(CURDIR)/hicolor/$${i}x$${i}/apps/$${kstrip}.png" \
-#	                $(CURDIR)/$${kstrip}.svg ; \
-#	    done; \
-#	done
-#
-	mkdir pixmaps
+	for i in ${SIZE}; do \
+	    mkdir -p "hicolor/$${i}x$${i}/apps" ; \
+	    for k in $$(ls *svg); do \
+	        kstrip=$$(echo $${k} | awk -F . {'print $$1'}) ; \
+	        inkscape --export-width=$${i} \
+	            --export-height=$${i} \
+	            --export-png="$(CURDIR)/hicolor/$${i}x$${i}/apps/$${kstrip}.png" \
+	                $(CURDIR)/$${kstrip}.svg ; \
+	    done; \
+	done
+
+	mkdir -p pixmaps
 
 	cd hicolor/32x32/apps; \
 	for i in $$(ls *png); do \
-	    kstrip=$$(echo $${k} | awk -F . {'print $$1'}) ; \
-	    convert $${i} pixmaps/$${kstrip}.xpm; \
+	    kstrip=$$(echo $${i} | awk -F . {'print $$1'}); \
+	    convert $${i} ../../../pixmaps/$${kstrip}.xpm; \
 	done;
 
-##	convert hicolor/16x16/apps/${ICON}.png pixmaps/${ICON}-16.xpm
-	
+	cd hicolor/16x16/apps; \
+	for i in $$(ls *png); do \
+	    kstrip=$$(echo $${i} | awk -F . {'print $$1'}) ; \
+	    convert $${i} ../../../pixmaps/$${kstrip}-16.xpm; \
+	done;
 
 	mkdir -p hicolor/scalable
 	cp *.svg hicolor/scalable	
