@@ -1,0 +1,20 @@
+Source: siduction-icons
+Section: graphics
+Priority: extra
+Maintainer: Alf Gaida <agaida@siduction.org>
+Build-Depends: debhelper (>= 9),
+    inkscape,
+    imagemagick,
+    perl,
+    perlmagick,
+    libxml-parser-perl,
+    fonts-droid
+Standards-Version: 3.9.3
+Vcs-Git: git://git.siduction.org/code/siduction-icons.git
+Vcs-Browser: http://git.siduction.org/code/siduction-icons.git
+
+Package: siduction-icons
+Architecture: all
+Depends: ${misc:Depends}, creativecommons3
+Description: Siduction Icons 
+ Slow growing icon library.

@@ -2,3 +2,9 @@
 hicolor/
 pixmaps/
 
+## debian/foo
+debian/files
+debian/siduction-icons.debhelper.log
+debian/siduction-icons.substvars
+debian/siduction-icons/
+
