@@ -6,7 +6,7 @@ Files:     *
 Copyright: 2011-2012 Sven Strohmeier <se7enelven@gmail.com>
 License:   CC-BY-SA-3.0
 
-Files:     makefile debian/* 
+Files:     Makefile debian/* 
 Copyright: 2011-2012 Alf Gaida <agaida@siduction.org>
 License:   GPL-3.0+
 
@@ -31,7 +31,6 @@ License: CC-BY-SA-3.0
  Attribution-ShareAlike 3.0 Unported License  can be found in
  "/usr/share/creativecommons/3.0/cc-by-sa-3.0".
 
-
 License: GPL-3.0+
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -48,4 +47,3 @@ License: GPL-3.0+
  .
  On Debian systems, the complete text of the GNU General
  Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
-
