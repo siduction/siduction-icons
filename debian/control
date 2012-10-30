@@ -16,5 +16,8 @@ Vcs-Browser: http://git.siduction.org/code/siduction-icons.git
 Package: siduction-icons
 Architecture: all
 Depends: ${misc:Depends}, creativecommons3
+Breaks: siduction-art-icons
+Replaces: siduction-art-icons
+Provides: siduction-art-icons
 Description: Siduction Icons 
  Slow growing icon library.
